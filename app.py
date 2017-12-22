@@ -1,10 +1,14 @@
 from authy import AuthyFormatException
+from authy import AuthyApiException
 from authy.api import AuthyApiClient
 
 
 def main():
-    auth('api_key', 'your email here', 'phone_number', 47)
-    request_sms('api_key', 'user_id')
+    try:
+        auth('api_key', 'your email here', 'phone_number', 'area_code')
+        request_sms('api_key', 'user_id')
+   execpt AuthyApiExecption:
+          print('unable to connect')
 
 
 def auth(key, email, phone, area_code):
