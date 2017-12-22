@@ -7,7 +7,7 @@ def main():
     try:
         auth('api_key', 'your email here', 'phone_number', 'area_code')
         request_sms('api_key', 'user_id')
-   execpt AuthyApiExecption:
+    except AuthyApiExecption:
           print('unable to connect')
 
 
